@@ -21,16 +21,15 @@ if len(sys.argv) > 1:
 else:
     FILE = "file.kv"
 
-class KazamApp(App):
+class VizualizeApp(App):
     
     antigo = """
     Label:
-        text: skjskajksjs
+        text: KV Vizualize
         """
 
     def build(self):
         return ScreenManager()
-
 
     def on_start(self):
         Clock.schedule_interval(self.constroi, 1/60)
@@ -110,5 +109,5 @@ class KazamApp(App):
 
 app = None
 if __name__ == '__main__':
-    app = KazamApp()
+    app = VizualizeApp()
     app.run()
